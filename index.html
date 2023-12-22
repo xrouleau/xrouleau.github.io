@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recettes Communautaires</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" ></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!–– Navigation bar avec le titre du site ––>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 ms-5 h1">Répertoire de recettes communautaires</span>
+        </div>
+    </nav>
+    <!–– grid ––>
+    <div class="container-xxl mt-5">
+        <!–– rangée ––>
+        <div class="row gx-5">
+            <!–– colonne 1 ––>
+            <div class="col-xl">
+                <h2>Ajouter une recette</h2>
+                <!–– formulaire ––>
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom de la recette</label>
+                        <input type="text" class="form-control" id="nom" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Ingrédient</span>
+                        <input type="text" aria-label="First name" class="form-control" id="i1">
+                        <span class="input-group-text">Quantité</span>
+                        <input type="text" aria-label="Last name" class="form-control" id="qt1" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Ingrédient</span>
+                        <input type="text" aria-label="First name" class="form-control" id="i2" required>
+                        <span class="input-group-text">Quantité</span>
+                        <input type="text" aria-label="Last name" class="form-control" id="qt2" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Ingrédient</span>
+                        <input type="text" aria-label="First name" class="form-control" id="i3" required>
+                        <span class="input-group-text">Quantité</span>
+                        <input type="text" aria-label="Last name" class="form-control" id="qt3" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Ingrédient</span>
+                        <input type="text" aria-label="First name" class="form-control" id="i4" required>
+                        <span class="input-group-text">Quantité</span>
+                        <input type="text" aria-label="Last name" class="form-control" id="qt4" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Ingrédient</span>
+                        <input type="text" aria-label="First name" class="form-control" id="i5" required>
+                        <span class="input-group-text">Quantité</span>
+                        <input type="text" aria-label="Last name" class="form-control" id="qt5" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="instru" class="form-label">Instructions</label>
+                        <textarea class="form-control" id="instru" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-5" onclick="ajouter()">Ajouter la recette</button>
+                </form>
+            </div>
+            <!–– colonne 2 ––>
+            <div class="col-xl">
+                <h2 class="ms-3">Ajouter une recette</h2>
+                <div class="container" id="cartes"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
